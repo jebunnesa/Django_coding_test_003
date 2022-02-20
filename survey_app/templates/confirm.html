@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Survey submitted" %}{% endblock title %}
+
+{% block body %}
+<h1>{% trans "Survey submitted"%}</h1>
+<p>
+    <div class="alert alert-success">
+       {% trans "Thank you for your time! Your responses have been saved" %}
+    </div>
+    {% if response.survey.editable_answers %}
+        <div class="alert alert-info">
+           {% trans "Responses changed Successfully!!" %}
+        </div>
+    {% endif %}
+</p>
+{% endblock %}
