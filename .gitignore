@@ -1,0 +1,12 @@
+*.pyc
+__pycache__/
+media/
+migrations/
+../../venv/
+static_assets/
+db.sqlite3
+Project_Default.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/
+env
