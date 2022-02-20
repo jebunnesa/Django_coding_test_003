@@ -16,18 +16,18 @@ $ source venv/bin/activate
 
 ## Features
 
-● Admin can create multiple surveys.
-● In each survey, the admin can add multiple questions.
-● Depending on one question’s answer another question can be shown.
+● Admin can create multiple surveys. <br/>
+● In each survey, the admin can add multiple questions. <br/>
+● Depending on one question’s answer another question can be shown. <br/>
 ● For each question, its answer could be of multiple types, like text-field,
-number-field, dropdown, checkbox, radio button, etc.
+number-field, dropdown, checkbox, radio button, etc. <br/>
 ● In dropdown or checkbox or these types of answers, the admin can give multiple
-options.
-● Admin can see each survey’s question’s answers in a list.
-● Admins can see the submissions of customers in a report
+options. <br/>
+● Admin can see each survey’s question’s answers in a list. <br/>
+● Admins can see the submissions of customers in a report <br/>
 
-Here are the requirements for customers:
+Here are the requirements for customers:<br/>
 <!-- ● Users can log into the customer portal. -->
-● Users can select surveys from the list.
-● Users can answer questions.
-● Users can submit the form with the answer.
+● Users can select surveys from the list.<br/>
+● Users can answer questions.<br/>
+● Users can submit the form with the answer.<br/>
