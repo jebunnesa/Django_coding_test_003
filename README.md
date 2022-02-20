@@ -7,11 +7,11 @@ Setup project
 ```bash
 $ python3 -m venv venv
 $ source venv/bin/activate
-$ pip3 install -r requirements.txt
+(venv)$ pip3 install -r requirements.txt
 
 
-$ python manage.py migrate
-$ python manage.py runserver
+(venv)$ python manage.py migrate
+(venv)$ python manage.py runserver
 ```
 
 ## Features
