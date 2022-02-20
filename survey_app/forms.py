@@ -82,11 +82,11 @@ class ResponseForm(forms.ModelForm):
         if self.survey.display_method == Survey.BY_CATEGORY:
             if self.step is not None and self.step < len(self.categories):
                 return [self.categories[self.step]]
-            return [Category(name="No category", description="No cat desc")]
+            return [Category(name="", description="")]
         else:
             extras = []
             if self.qs_with_no_cat:
-                extras = [Category(name="No category", description="No cat desc")]
+                extras = [Category(name="", description="")]
 
             return self.categories + extras
 
@@ -197,7 +197,7 @@ class ResponseForm(forms.ModelForm):
             qchoices = question.get_choices()
             # add an empty option at the top so that the user has to explicitly
             # select one of the options
-            if question.type in [Question.SELECT, Question.SELECT_IMAGE]:
+            if question.type in [Question.SELECT]:
                 qchoices = tuple([("", "-------------")]) + qchoices
         return qchoices
 
@@ -279,10 +279,6 @@ class ResponseForm(forms.ModelForm):
                 answer = self._get_preexisting_answer(question)
                 if answer is None:
                     answer = Answer(question=question)
-                if question.type == Question.SELECT_IMAGE:
-                    value, img_src = field_value.split(":", 1)
-                    # TODO Handling of SELECT IMAGE
-                    LOGGER.debug("Question.SELECT_IMAGE not implemented, please use : %s and %s", value, img_src)
                 answer.body = field_value
                 data["responses"].append((answer.question.id, answer.body))
                 LOGGER.debug("Creating answer for question %d of type %s : %s", q_id, answer.question.type, field_value)

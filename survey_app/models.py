@@ -120,7 +120,6 @@ class Question(models.Model):
     SHORT_TEXT = "short-text"
     RADIO = "radio"
     SELECT = "select"
-    SELECT_IMAGE = "select_image"
     SELECT_MULTIPLE = "select-multiple"
     INTEGER = "integer"
     FLOAT = "float"
@@ -132,7 +131,6 @@ class Question(models.Model):
         (RADIO, _("radio")),
         (SELECT, _("select")),
         (SELECT_MULTIPLE, _("Select Multiple")),
-        (SELECT_IMAGE, _("Select Image")),
         (INTEGER, _("integer")),
         (FLOAT, _("float")),
         (DATE, _("date")),
